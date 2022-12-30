@@ -21,11 +21,6 @@ jobs:
     services:
       postgres:
         image: postgres:15.1
-        container_name: spring_db
-        volumes:
-          - ./log-directory:/var/lib/postgresql/data
-        expose:
-          - 5432
         env:
           POSTGRES_DB: ${{ env.POSTGRESQL_DB }}
           POSTGRES_USER: ${{ env.POSTGRESQL_USER }}
