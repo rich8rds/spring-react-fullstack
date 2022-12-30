@@ -1,4 +1,4 @@
-name: CI
+name: Springboot with React Fullstack
 
 on:
   pull_request:

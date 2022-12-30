@@ -233,8 +233,8 @@
                         <version>1.11.2</version>
 
                         <configuration>
-                            <nodeVersion>v16.18.0</nodeVersion>
-                            <npmVersion>8.19.2</npmVersion>
+                            <nodeVersion>v10.15.3</nodeVersion>
+                            <npmVersion>6.4.1</npmVersion>
                             <workingDirectory>src/frontend </workingDirectory>
                         </configuration>
 
