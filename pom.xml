@@ -279,7 +279,7 @@
                                     <goal>npm</goal>
                                 </goals>
                                 <configuration>
-                                    <arguments>build</arguments>
+                                    <arguments>npm run build</arguments>
                                 </configuration>
                             </execution>
                         </executions>
