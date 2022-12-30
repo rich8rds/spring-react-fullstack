@@ -2,11 +2,10 @@ name: Springboot with React Fullstack
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
-  workflow_dispatch:
 
 env:
   POSTGRESQL_VERSION: 15.1
@@ -37,7 +36,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: ./mvnw --no-transfer-progress clean package -P build-frontend
+      run: mvn -B package --file pom.xml
+
 
       -  name: Set up QEMU
          uses: docker/setup-qemu-action@v2
