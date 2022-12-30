@@ -121,4 +121,4 @@ const columns = getStudents => [
   },
 ];
 
-export {dataSource, columns}; 
+export {columns};
