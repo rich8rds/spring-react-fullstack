@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  POSTGRESQL_VERSION: 13.1
+  POSTGRESQL_VERSION: 15.1
   POSTGRESQL_DB: spring_db
   POSTGRESQL_USER: postgres
   POSTGRESQL_PASSWORD: password
