@@ -19,8 +19,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     services:
-      postgres:
+      app:
+        image: 'spring-react:latest'
+        build:
+          context .
+        ports:
+          - "8080:8080"
+        depends_on:
+          - spring_db
+      spring_db:
         image: postgres:15.1
+        container_name: spring_db
+        volumes:
+          - ./log-directory:/var/lib/postgresql/data
+        expose:
+          - 5432
         env:
           POSTGRES_DB: ${{ env.POSTGRESQL_DB }}
           POSTGRES_USER: ${{ env.POSTGRESQL_USER }}
