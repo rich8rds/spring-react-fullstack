@@ -1,10 +1,12 @@
 name: Springboot with React Fullstack
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
-#  workflow_dispatch:
+  workflow_dispatch:
 
 env:
   POSTGRESQL_VERSION: 13.1
