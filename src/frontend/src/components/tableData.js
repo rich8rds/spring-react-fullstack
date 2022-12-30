@@ -9,24 +9,24 @@ import PopupConfirm from "../api/PopupConfirm";
 import axios from "axios";
 
 
-const dataSource = [
-  {
-    key: '1',
-    name: 'Mike',
-    age: 32,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-];
+// const dataSource = [
+//   {
+//     key: '1',
+//     name: 'Mike',
+//     age: 32,
+//     address: '10 Downing Street',
+//   },
+//   {
+//     key: '2',
+//     name: 'John',
+//     age: 42,
+//     address: '10 Downing Street',
+//   },
+// ];
 
 const CustomAvatar = ({name, style}) => {
   let trim = name.trim();
-  if(trim.length == 0) return <Avatar style={style} icon={<UserOutlined />}/>
+  if(trim.length === 0) return <Avatar style={style} icon={<UserOutlined />}/>
 
   const split = trim.split(" ");
   if(split.length === 1) return <Avatar style={style}>{name.charAt(0).toUpperCase()}</Avatar>
@@ -74,14 +74,15 @@ const cancelDeleteStudent = (e) => {
   message.error('Click on No');
 };
 
-const confirmEditStudent = (e) => {
-  console.log(e);
-  message.success('Click on Yes');
-};
-const cancelEditStudent = (e) => {
-  console.log(e);
-  message.error('Click on No');
-};
+// const confirmEditStudent = (e) => {
+//   console.log(e);
+//   message.success('Click on Yes');
+// };
+//
+// const cancelEditStudent = (e) => {
+//   console.log(e);
+//   message.error('Click on No');
+// };
 
 
 const columns = getStudents => [

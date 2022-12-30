@@ -12,7 +12,7 @@ import {
   UserAddOutlined
 } from '@ant-design/icons';
 
-import { Layout, Menu, theme, Table, Spin, Empty, Button, Badge, Tag } from 'antd';
+import { Layout, Menu, theme, Table, Spin, Empty, Button, Tag } from 'antd';
 import axios from 'axios';
 import "../styles/myLayout.css";
 import DrawerForm from './DrawerForm';
