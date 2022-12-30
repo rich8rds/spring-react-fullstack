@@ -19,13 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     services:
-      app:
-        image: 'spring-react:latest'
-        build:
-          context .
-        ports:
-          - "8080:8080"
-      spring_db:
+      postgres:
         image: postgres:15.1
         container_name: spring_db
         volumes:
