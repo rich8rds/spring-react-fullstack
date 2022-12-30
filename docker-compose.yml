@@ -1,0 +1,26 @@
+version: '3'
+services:
+  app:
+    image: 'spring-react:latest'
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - spring_db
+
+  spring_db:
+    image: 'postgres:latest'
+    container_name: spring_db
+    ports:
+      - '5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=spring_db
+    volumes:
+      - ./log-directory:/var/lib/postgresql/data
+    expose:
+      - 5432
+
+
